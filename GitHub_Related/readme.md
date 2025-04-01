@@ -157,3 +157,36 @@ git push origin master
 ```
 
 위의 내용은 **마크다운 형식**으로 작성된 `README.md` 파일입니다. 이 파일을 그대로 `README.md`로 저장하고, 프로젝트 폴더에 넣어두시면 됩니다. 이 문서는 처음부터 끝까지 라즈베리파이에서 GitHub과의 연동 작업을 단계별로 안내합니다.
+
+3. GitHub의 SSH 인증 방식 사용
+
+HTTPS 방식 대신 SSH 방식으로 원격 저장소를 푸시하려면, SSH를 통해 인증을 설정해야 합니다. 아래는 SSH로 푸시하는 방법입니다.
+해결 방법: SSH로 원격 저장소 연결
+(1) GitHub SSH URL 사용
+
+현재 git push 명령어에서 HTTPS URL을 사용하고 있지만, SSH URL로 변경해야 합니다. SSH는 Personal Access Token을 요구하지 않으며, SSH 키 인증을 사용하여 푸시할 수 있습니다.
+
+    현재 연결된 원격 저장소의 URL을 확인하려면 아래 명령어를 실행하세요:
+
+    git remote -v
+
+    만약 https://github.com/uncroos/school_project.git로 표시된다면, 이를 SSH URL로 변경해야 합니다. SSH URL은 git@github.com:uncroos/school_project.git 형식입니다.
+
+(2) 원격 저장소 URL을 SSH로 변경
+
+git remote set-url origin git@github.com:uncroos/school_project.git
+
+이제 GitHub에서 SSH 방식으로 푸시할 수 있습니다.
+(3) SSH 키를 GitHub에 등록
+
+이전에 SSH 키를 생성하고 GitHub에 등록한 상태여야 SSH로 인증이 가능합니다. 아직 SSH 키를 등록하지 않았다면, 다음 단계를 진행합니다.
+
+    SSH 키를 생성하고 GitHub에 등록하는 방법은 앞서 설명한 대로 진행하면 됩니다. ~/.ssh/id_rsa.pub 파일의 공개 키를 GitHub의 SSH 설정에 추가해야 합니다.
+
+(4) SSH로 푸시
+
+SSH URL로 변경한 후에는 아래 명령어로 다시 푸시를 시도해보세요:
+
+git push origin main
+
+이제 SSH 키로 인증되므로 Personal Access Token이 필요하지 않습니다.
