@@ -3,7 +3,8 @@
 ![GEMINITARS Logo](https://i.insider.com/5481ffc3eab8ea566b049f67?width=1600&format=jpeg&auto=webp)
 
 ## 🎯 프로젝트 개요
-**GEMINITARS**는 영화 *인터스텔라*의 TARS에서 영감을 받아 개발한 **지능형 서비스 로봇**입니다. Google Gemini API를 활용하여 음성 대화 기능을 제공하며, 얼굴 인식, 물체 집기, 원격 조작 기능을 갖추고 있습니다.
+**GEMINITARS**는 영화 *인터스텔라*의 TARS에서 영감을 받아 개발한 **지능형 서비스 로봇**입니다. 
+Google Gemini API를 활용하여 음성 대화 기능을 제공하며, 얼굴 인식, 물체 집기, 원격 조작 기능을 갖추고 있습니다.
 
 ## 🚀 주요 기능
 ### 1. 🤖 음성 인식 및 대화
