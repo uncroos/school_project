@@ -66,3 +66,21 @@ Google Gemini API를 활용하여 음성 대화 기능을 제공하며, 얼굴 �
 - 이메일: any492266@gmail.com
 - GitHub Issues를 통해 문의 가능
 
+
+
+
+
+
+
+
+-----------
+# config.txt 문서 열기
+sudo nano /boot/firmware/config.txt
+
+# 변경할 FAN 동작 온도&속도 정보 입력
+dtoverlay=pwm-fan
+dtparam=fan_temp0=20000,fan_temp0_hyst=5000,fan_temp0_speed=80
+dtparam=fan_temp1=40000,fan_temp1_hyst=3000,fan_temp1_speed=150
+dtparam=fan_temp2=35000,fan_temp2_hyst=4000,fan_temp2_speed=200
+dtparam=fan_temp3=50000,fan_temp3_hyst=5000,fan_temp3_speed=255
+
